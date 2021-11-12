@@ -17,16 +17,12 @@ function Header() {
       <div className="navigation-container">
         <nav id="nav">
           <button type="button" onClick={() => setShowMenu(!showMenu)}>
-            <BsList size="2rem"/>
+            <BsList size="2rem" />
           </button>
-        <ul id="menu" className={`${showMenu ? 'showMenu' : "hideMenu"}`}>
-          <li>
-            Marcar
-          </li>
-          <li>
-            Visualizar
-          </li>
-        </ul>
+          <ul id="menu" className={`${showMenu ? 'showMenu' : 'hideMenu'}`}>
+            <li>Marcar</li>
+            <li>Visualizar</li>
+          </ul>
         </nav>
       </div>
     </header>
