@@ -13,6 +13,7 @@ function GeneralProvider({ children }) {
 
   const globalState = {
     scheduledTime,
+    setScheduledTime,
     bookTime,
   };
 

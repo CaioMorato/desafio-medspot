@@ -22,7 +22,7 @@ export const timeFormatConverter = (time) => {
 };
 
 export const timeDifferenceCalc = (appointmentTime) => {
-  const currentTime = new Date();
+  const currentTime = new Date('Fri Nov 12 2021 10:00:47 GMT-0300 (Horário Padrão de Brasília)');
   const milisecondsDiff = appointmentTime - currentTime;
 
   return milisecondsDiff / 1000 / 60;
