@@ -12,6 +12,33 @@ General Config
   box-sizing: border-box;
 }
 
+body {
+  background-color: #c3e8e4;
+}
+
 /* --------------------------
 Header
 -------------------------- */
+
+#nav #menu {
+  list-style-type: none;
+}
+
+#nav .showMenu {
+  display: flex;
+  flex-flow: column;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 2.6rem;
+  /* width: 30%; */
+  background-color: #215264;
+}
+
+#nav .hideMenu {
+  display: none;
+}
+
+.showMenu li {
+  padding: 7px;
+}

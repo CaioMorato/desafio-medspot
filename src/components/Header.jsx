@@ -1,7 +1,11 @@
+// vitals
+import { useState } from 'react';
 // styles
-import medspotLogo from '../images/medspot-logo.png'
+import medspotLogo from '../images/medspot-no-bg.png';
+import { BsList } from 'react-icons/bs';
 
 function Header() {
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <header id="header" className="flex items-center justify-between mx-5">
       <div className="logo-container">
@@ -9,15 +13,22 @@ function Header() {
       </div>
       <div className="company-name">Medspot</div>
       <div className="navigation-container">
-        <ul id="menu" className="flex flex-col md:flex-row md:gap-x-10">
+        <nav id="nav">
+          <button type="button" onClick={() => setShowMenu(!showMenu)}>
+            <BsList size="2rem"/>
+          </button>
+        <ul id="menu" className={`${showMenu ? 'showMenu' : "hideMenu"}`}>
           <li>
             Marcar
           </li>
-          <li>Visualizar</li>
+          <li>
+            Visualizar
+          </li>
         </ul>
+        </nav>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

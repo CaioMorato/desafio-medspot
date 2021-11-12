@@ -1,0 +1,17 @@
+@media (min-width: 450px) {
+  #nav button {
+    display: none;
+  }
+
+  #nav #menu {
+    display: flex;
+    flex-flow: row;
+    gap: 1.2rem;
+    position: inherit;
+    font-size: larger;
+  }
+
+  #nav .hideMenu {
+    display: flex;
+  }
+}
