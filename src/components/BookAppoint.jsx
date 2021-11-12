@@ -2,10 +2,12 @@
 import { useContext, useState } from 'react';
 // context
 import MyContext from '../context/MyContext';
+import timeArray from '../helpers/timeArray';
+import timeHandler from '../helpers/timeHandler';
 
 function BookAppoint() {
-  const { timeArray, bookTime } = useContext(MyContext);
-  const [selectTime, setSelectTime] = useState('9:00');
+  const { availableTimes, bookTime, scheduledTimes } = useContext(MyContext);
+  const [selectTime, setSelectTime] = useState(availableTimes[0]);
 
   const handleChange = ({ target }) => {
     const { value } = target;
@@ -23,17 +25,20 @@ function BookAppoint() {
         </div>
         <div className="form-control flex flex-col">
           <label className="label">
-            <span className="label-text text-lg">Em qual horário?</span>
+            <span className="label-text text-lg">Horários disponíveis</span>
           </label>
           <select
             name="time-select"
             id="time-select"
-            className="w-20"
+            className="select select-bordered select-sm w-20"
             value={selectTime}
-            onChange={(e) => handleChange(e)}
+            onChange={(e) => {
+              handleChange(e);
+              timeHandler(timeArray, scheduledTimes);
+            }}
           >
-            {timeArray.map((time) => (
-              <option key={time} value={time}>
+            {availableTimes.map((time) => (
+              <option defaultValue={availableTimes[0]} key={time} value={time}>
                 {time}
               </option>
             ))}

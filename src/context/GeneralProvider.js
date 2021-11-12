@@ -1,7 +1,8 @@
 // vitals
 import React, { useState } from 'react';
 // components
-import timeArray from '../helpers/availableTime';
+import timeArray from '../helpers/timeArray';
+import timeHandler from '../helpers/timeHandler';
 // context
 import MyContext from './MyContext';
 
@@ -13,10 +14,12 @@ function GeneralProvider({ children }) {
     setScheduledTime(allScheduledTime);
   };
 
+  const availableTimes = timeHandler(timeArray, scheduledTime);
+
   const globalState = {
-    timeArray,
     scheduledTime,
     bookTime,
+    availableTimes,
   };
 
   return <MyContext.Provider value={globalState}>{children}</MyContext.Provider>;
