@@ -11,7 +11,9 @@ function Header() {
       <div className="logo-container">
         <img src={medspotLogo} width="64px" alt="Logo da empresa Medspot" />
       </div>
-      <div className="company-name">Medspot</div>
+      <div className="company-name">
+        <h1>Medspot</h1>
+      </div>
       <div className="navigation-container">
         <nav id="nav">
           <button type="button" onClick={() => setShowMenu(!showMenu)}>
