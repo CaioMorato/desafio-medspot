@@ -1,4 +1,5 @@
 const timeArray = [
+  'Escolha um horário',
   '9:00',
   '9:30',
   '10:00',

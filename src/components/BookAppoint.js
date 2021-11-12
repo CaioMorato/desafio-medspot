@@ -1,12 +1,17 @@
 // vitals
 import { useContext, useState } from 'react';
+// components
+import timeArray from '../helpers/timeArray';
+import { timeHandler } from '../helpers/timeManipulation';
 // context
 import MyContext from '../context/MyContext';
 
 function BookAppoint() {
-  const { availableTimes, bookTime } = useContext(MyContext);
+  const { bookTime, scheduledTime } = useContext(MyContext);
   const [patientName, setPatientName] = useState('');
-  const [selectTime, setSelectTime] = useState(availableTimes[0]);
+  const [selectTime, setSelectTime] = useState(false);
+
+  const availableTimes = timeHandler(timeArray, scheduledTime);
 
   const handleChange = ({ target }) => {
     const { value } = target;
@@ -38,7 +43,7 @@ function BookAppoint() {
             value={selectTime}
             onChange={(e) => handleChange(e)}
           >
-            {availableTimes.map((time) => (
+            {availableTimes.map((time, index) => (
               <option key={time} value={time}>
                 {time}
               </option>
@@ -49,7 +54,11 @@ function BookAppoint() {
           <button
             type="submit"
             className="btn btn-success mt-10"
-            onClick={() => bookTime({ name: patientName, time: selectTime })}
+            disabled={!selectTime}
+            onClick={() => {
+              bookTime({ name: patientName, time: selectTime });
+              setSelectTime(false);
+            }}
           >
             Marcar Consulta
           </button>

@@ -1,37 +1,43 @@
+// components
+import { timeFormatConverter, timeDifferenceCalc } from '../helpers/timeManipulation';
+import appointmentTimeValidator from './AppointmentTimeFilter';
+
 function AppointmentCard({ name, time }) {
-  const currentTime = new Date();
-  const currentYear = currentTime.getFullYear();
-  const currentMonth = currentTime.getMonth();
-  const currentDay = currentTime.getDate();
+  const formattedTime = timeFormatConverter(time);
+  const timeDifference = timeDifferenceCalc(formattedTime);
 
-  const splittedTime = time.split(':');
-
-  const ISOPatientTime = `${currentYear}-${currentMonth + 1}-${currentDay}T${splittedTime[0]}:${
-    splittedTime[1]
-  }:00Z`;
-
-  const date1 = new Date(currentTime.toISOString());
-  const date2 = new Date(ISOPatientTime);
-
-  const timeDifference = Math.abs(date2 - date1) / 1000;
-
-  console.log(timeDifference);
-
-  // console.log(`current Time: ${currentTime}
-  // currentYear: ${currentYear}
-  // ISO current Time: ${currentTime.toISOString()}
-  // ISO Patient Time: ${ISOPatientTime}
-  // splittedTime: ${splittedTime}`);
   return (
-    <div>
-      <div>
-        <h3>{name}</h3>
+    <div
+      className={`${
+        timeDifference < 120 ? 'bg-error' : 'bg-primary-content'
+      } appointment-card m-3 p-4 shadow-lg`}
+    >
+      <div className="appointment-name-container my-3">
+        <h3 className="text-center font-bold">{name}</h3>
       </div>
-      <div>
-        <h4>{time}</h4>
+      <div className="appointment-time-container my-3">
+        <h4 className="text-center">{time}</h4>
       </div>
-      <div>
-        <h4>Sua consulta começa em {}</h4>
+      <div className="appointment-timediff-container my-3">
+        {appointmentTimeValidator(timeDifference, time)}
+      </div>
+      <div className="appointment-buttons-container flex justify-center my-3">
+        <button className="btn btn-sm btn-error">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            className="inline-block w-4 h-4 mr-2 stroke-current "
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+          Cancelar
+        </button>
       </div>
     </div>
   );
