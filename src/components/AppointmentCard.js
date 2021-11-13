@@ -6,21 +6,28 @@ import { timeFormatConverter, timeDifferenceCalc } from '../helpers/timeManipula
 // context
 import MyContext from '../context/MyContext';
 
-function AppointmentCard({ name, time }) {
-  const { scheduledTime, setScheduledTime } = useContext(MyContext);
+function AppointmentCard({ name, time, valid }) {
+  const { scheduledTime, setScheduledTime, canceledSchedule, setCanceledSchedule } =
+    useContext(MyContext);
+
   const formattedTime = timeFormatConverter(time);
   const timeDifference = timeDifferenceCalc(formattedTime);
 
-  const removeScheduledTime = (specTime) => {
+  const removeScheduledTime = (appointmentObject) => {
+    const { time: specTime } = appointmentObject;
+
+    const canceledAppointmentObject = { ...appointmentObject, valid: false };
+
     const removeTime = scheduledTime.filter(({ time }) => time !== specTime);
     setScheduledTime(removeTime);
+    setCanceledSchedule([...canceledSchedule, canceledAppointmentObject]);
   };
 
   return (
     <div
       className={`${
         timeDifference < 120 ? 'bg-warning' : 'bg-primary-content'
-      } appointment-card m-3 p-4 shadow-lg`}
+      } appointment-card m-3 p-4 shadow-lg rounded-lg w-10/12`}
     >
       <div className="appointment-name-container my-3">
         <h3 className="text-center font-bold">{name}</h3>
@@ -32,7 +39,10 @@ function AppointmentCard({ name, time }) {
         {appointmentTimeValidator(timeDifference, time)}
       </div>
       <div className="appointment-buttons-container flex justify-center my-3">
-        <button className="btn btn-sm btn-error" onClick={() => removeScheduledTime(time)}>
+        <button
+          className="btn btn-sm btn-error"
+          onClick={() => removeScheduledTime({ name, time })}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

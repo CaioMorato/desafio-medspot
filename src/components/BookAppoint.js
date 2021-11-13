@@ -56,7 +56,7 @@ function BookAppoint() {
             className="btn btn-success mt-10"
             disabled={!selectTime}
             onClick={() => {
-              bookTime({ name: patientName, time: selectTime });
+              bookTime({ name: patientName, time: selectTime, valid: true });
               setSelectTime(false);
             }}
           >

@@ -5,6 +5,7 @@ import MyContext from './MyContext';
 
 function GeneralProvider({ children }) {
   const [scheduledTime, setScheduledTime] = useState([]);
+  const [canceledSchedule, setCanceledSchedule] = useState([]);
 
   const bookTime = (time) => {
     const allScheduledTime = [...scheduledTime, time];
@@ -14,6 +15,8 @@ function GeneralProvider({ children }) {
   const globalState = {
     scheduledTime,
     setScheduledTime,
+    canceledSchedule,
+    setCanceledSchedule,
     bookTime,
   };
 
