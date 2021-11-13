@@ -7,12 +7,16 @@ import { BsList } from 'react-icons/bs';
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
   return (
-    <header id="header" className="flex items-center justify-between mx-5">
+    <header id="header" className="flex items-center justify-between mx-4 mb-5">
       <div className="logo-container">
-        <img src={medspotLogo} width="64px" alt="Logo da empresa Medspot" />
+        <img
+          src={medspotLogo}
+          width="64px"
+          alt="Logo da minha futura empresa empresa do coração <3"
+        />
       </div>
       <div className="company-name">
-        <h1>Medspot</h1>
+        <h1 className="text-2xl font-bold text-center">Medspot</h1>
       </div>
       <div className="navigation-container">
         <nav id="nav">
@@ -20,8 +24,12 @@ function Header() {
             <BsList size="2rem" />
           </button>
           <ul id="menu" className={`${showMenu ? 'showMenu' : 'hideMenu'}`}>
-            <li>Marcar</li>
-            <li>Visualizar</li>
+            <li>
+              <a href="#marcar">Marcar</a>
+            </li>
+            <li>
+              <a href="#visualizar">Visualizar</a>
+            </li>
           </ul>
         </nav>
       </div>

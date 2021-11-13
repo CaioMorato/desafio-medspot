@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* --------------------------
 General Config
@@ -14,7 +15,11 @@ General Config
 
 body {
   background-color: #c3e8e4;
-  height: 100vh;
+}
+
+h1,
+h2 {
+  font-family: 'Poppins', sans-serif;
 }
 
 /* --------------------------
@@ -32,8 +37,7 @@ Header
   right: 0;
   text-align: center;
   top: 2.6rem;
-  /* width: 30%; */
-  background-color: #215264;
+  background-color: #9ec8f1;
 }
 
 #nav .hideMenu {
@@ -41,5 +45,6 @@ Header
 }
 
 .showMenu li {
-  padding: 7px;
+  padding: 10px;
+  border: 1px solid black;
 }

@@ -1,6 +1,8 @@
 export const timeHandler = (timeArray, scheduledTime) => {
+  // first we need to get only the time entries of each object in the array
   const times = scheduledTime.map(({ time }) => time);
 
+  // then we need to filter the time array and create a new one excluding the items that already are in the scheduledTime array
   const availableTimes = timeArray.filter((eachTime) => !times.includes(eachTime));
 
   return availableTimes;
@@ -27,11 +29,3 @@ export const timeDifferenceCalc = (appointmentTime) => {
 
   return milisecondsDiff / 1000 / 60;
 };
-
-// const timeValidator = (timeDifference) => {
-//   if (timeDifference < 120) {
-//     return 'Seu agendamento começará em menos de 2 horas';
-//   } else {
-//     return 'Seu agendamento começará mais de duas horas';
-//   }
-// };

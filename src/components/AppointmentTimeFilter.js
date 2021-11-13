@@ -3,6 +3,7 @@ function appointmentTimeValidator(timeDifference, time) {
   let minutes = parseInt(Math.ceil(timeDifference % 60));
 
   const timeStringFormatter = (hours, minutes) => {
+    // just a "beautyfier" for the time string
     if (minutes === 60) {
       hours += 1;
       minutes = 0;
@@ -15,14 +16,12 @@ function appointmentTimeValidator(timeDifference, time) {
   };
 
   if (hours < 0) {
-    return <h4 className="text-center">Sua consulta já foi às {time}</h4>;
+    return <h4>Sua consulta já foi às {time}</h4>;
   }
   if (hours === 0) {
-    return <h4 className="text-center">Sua consulta começa em {`${minutes} minutos`}</h4>;
+    return <h4 className="text-center w-60">Sua consulta começa em {`${minutes} minutos`}</h4>;
   }
-  return (
-    <h4 className="text-center">Sua consulta começa em {timeStringFormatter(hours, minutes)}</h4>
-  );
+  return <h4>Sua consulta começa em {timeStringFormatter(hours, minutes)}</h4>;
 }
 
 export default appointmentTimeValidator;

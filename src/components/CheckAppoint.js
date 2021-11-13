@@ -11,8 +11,11 @@ function CheckAppoint() {
   const arrayMixUp = [...canceledSchedule, ...scheduledTime];
 
   return (
-    <section className="check-apt rounded-lg mx-2 p-3 bg-base-200 flex flex-col items-center">
-      <div className="filter-buttons flex gap-x-10">
+    <section
+      id="visualizar"
+      className="check-apt rounded-lg mx-4 min-h-1/4 bg-base-200 p-3 flex flex-col items-center md:w-1/2 md:m-auto"
+    >
+      <div className="filter-buttons flex gap-x-7 p-4">
         <button className="btn btn-info" onClick={() => setExhibitionFilter(false)}>
           Todas
         </button>
@@ -21,10 +24,13 @@ function CheckAppoint() {
         </button>
       </div>
       {arrayMixUp
+        // this first .sort will keep all cards organized by time (with the funky unicode behavior)
         .sort(function (a, b) {
           return a.time.localeCompare(b.time);
         })
+        // this second filter makes the exhibition buttons work
         .filter(({ valid }) => (exhibitionFilter ? valid : valid || !valid))
+        // this third map generates the appointment cards
         .map(({ name, time, valid }) => (
           <AppointmentCard key={`${name} ${time}`} name={name} time={time} valid={valid} />
         ))}
