@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Medspot Agendamento
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Projeto para agendamento e visualização de consulta
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Visão Geral
 
-### `yarn start`
+##### Este projeto foi realizado utilizando HTML, CSS, React.js e o tailwind.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## **Sumário**
 
-### `yarn test`
+- [Pré Requisitos](#pré-requisitos)
+- [Instalação](#instalação)
+- [Utilização](#utilização)
+- [Rotas | Endpoints](#rotas)
+  - [POST](#método-post)
+  - [GET](#método-get)
+  - [PUT](#método-put)
+  - [DELETE](#método-delete)
+  - [Possíveis respostas/status](#possíveis-respostas-e-status)
+- [Tour pelos arquivos](#tour-pelos-arquivos)
+- [Uso de cada biblioteca](#uso-de-cada-biblioteca)
+- [Sobre o autor](#sobre-o-autor)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+## **Pré requisitos**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para utilizar este projeto basta clonar o projeto em seu computador, utilizando o seguinte comando: 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##### `git clone git@github.com:CaioMorato/desafio-medspot.git`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Após isso basta seguir os passos de Instalação abaixo.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ou se quiser utilizá-lo em um site externo sem baixar nada basta acessar:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **Instalação**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para começar a utilizar esse projeto basta instalar as dependências utilizando o seguinte comando:
 
-### Code Splitting
+##### `npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Após instalar as dependências, basta iniciar a aplicação em seu navegador, digitando no terminal:
 
-### Analyzing the Bundle Size
+##### `npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## **Utilização**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### A utilização se dá de forma simples através de 2 componentes, um formulário de cadastro e um outro componente.
 
-### Advanced Configuration
+- ### Marcar Consulta
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  No primeiro componente é possível simular a marcação de uma consulta. O sistema pede apenas 2 dados: o nome do paciente e um seletor de horários que vai de 30 em 30 minutos das 9:00 até 18:00. 
 
-### Deployment
+  Caso seja marcado um horário, esse horário ficará bloqueado para utilização, sendo necessário o cancelamento da consulta para que se libere o horário novamente.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- ### **Visualizar Consultas**
 
-### `yarn build` fails to minify
+  No segundo componente é possível ver as consultas já agendadas, ele mostrará o nome do paciente, o horário em que foi marcado a consulta e uma informação dinâmica, dependendo da diferença do horário atual com a consulta, podendo ser caso a consulta já tenha sido ou se ainda será e quanto tempo falta.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  Caso a consulta esteja dentro do período de 2 horas, o card também ficará alaranjado, senão, sua cor normal é branca
+
+---
+
+## **Sobre o autor**
+
+Olá! Que bom que chegou até aqui!
+
+Eu me chamo Caio, e sou estudante de desenvolvimento Web. Comecei meus estudos no ano de 2021, e estou me apaixonando cada dia que passa, através dos estudos, por educação e tecnologia. Esse projeto e esse README foram desenvolvidos como um desafio técnico. Eu empenhei muito carinho na construção de cada linha.
+
+Você pode olhar mais projetos que já fiz [aqui](https://github.com/CaioMorato)
+
+Ou se conectar comigo no [linkedin!](https://www.linkedin.com/in/morato-dev/)
