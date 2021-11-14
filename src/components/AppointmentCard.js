@@ -29,7 +29,7 @@ function AppointmentCard({ name, time, valid }) {
   return (
     <div
       className={`${
-        timeDifference < 120 ? 'bg-orange-close-appointment' : 'bg-primary-content'
+        timeDifference <= 120 ? 'bg-orange-close-appointment' : 'bg-primary-content'
       } appointment-card m-3 p-3 w-10/12 shadow-smooth rounded-lg`}
     >
       <div className="appointment-name-container my-3">

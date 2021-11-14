@@ -7,12 +7,12 @@ function appointmentTimeValidator(timeDifference, time) {
     if (minutes === 60) {
       hours += 1;
       minutes = 0;
-      return `${hours}:0${minutes}`;
+      return `${hours}h:0${minutes}`;
     }
     if (minutes >= 10) {
-      return `${hours}:${minutes}`;
+      return `${hours}h:${minutes}`;
     }
-    return `${hours}:0${minutes}`;
+    return `${hours}h:0${minutes}`;
   };
 
   if (hours < 0) {
