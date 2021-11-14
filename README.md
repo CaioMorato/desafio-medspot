@@ -39,6 +39,7 @@ Após isso basta seguir os passos de Instalação abaixo.
 
 Ou se quiser utilizá-lo em um site externo sem baixar nada basta acessar:
 
+https://desafio-medspot.vercel.app/
 
 
 ---
