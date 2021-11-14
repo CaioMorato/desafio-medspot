@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/agendamento-consulta/static/css/main.45007c84.chunk.css",
+    "main.js": "/agendamento-consulta/static/js/main.66a05727.chunk.js",
+    "main.js.map": "/agendamento-consulta/static/js/main.66a05727.chunk.js.map",
+    "runtime-main.js": "/agendamento-consulta/static/js/runtime-main.85dcccc0.js",
+    "runtime-main.js.map": "/agendamento-consulta/static/js/runtime-main.85dcccc0.js.map",
+    "static/js/2.b7e71b27.chunk.js": "/agendamento-consulta/static/js/2.b7e71b27.chunk.js",
+    "static/js/2.b7e71b27.chunk.js.map": "/agendamento-consulta/static/js/2.b7e71b27.chunk.js.map",
+    "index.html": "/agendamento-consulta/index.html",
+    "static/css/main.45007c84.chunk.css.map": "/agendamento-consulta/static/css/main.45007c84.chunk.css.map",
+    "static/js/2.b7e71b27.chunk.js.LICENSE.txt": "/agendamento-consulta/static/js/2.b7e71b27.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.85dcccc0.js",
+    "static/js/2.b7e71b27.chunk.js",
+    "static/css/main.45007c84.chunk.css",
+    "static/js/main.66a05727.chunk.js"
+  ]
+}
