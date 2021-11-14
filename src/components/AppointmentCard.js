@@ -36,7 +36,7 @@ function AppointmentCard({ name, time, valid }) {
         <h3 className="text-center font-bold card-title">{name}</h3>
       </div>
       <div className="appointment-time-container my-3">
-        <h4 className="text-center open-sans-font">{time}</h4>
+        <h4 className="text-center roboto-font">{time}</h4>
       </div>
       <div className="appointment-timediff-container my-3 flex flex-col items-center">
         {/* generates different card messages depending on the time difference */}

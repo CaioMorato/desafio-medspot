@@ -16,12 +16,20 @@ function appointmentTimeValidator(timeDifference, time) {
   };
 
   if (hours < 0) {
-    return <h4 className="my-4">Sua consulta já foi às {time}</h4>;
+    return <h4 className="my-4 roboto-font">Sua consulta já foi às {time}</h4>;
   }
   if (hours === 0) {
-    return <h4 className="text-center w-60 my-4">Sua consulta começa em {`${minutes} minutos`}</h4>;
+    return (
+      <h4 className="text-center w-60 my-4 roboto-font">
+        Sua consulta começa em {`${minutes} minutos`}
+      </h4>
+    );
   }
-  return <h4 className="my-4">Sua consulta começa em {timeStringFormatter(hours, minutes)}</h4>;
+  return (
+    <h4 className="my-4 roboto-font">
+      Sua consulta começa em {timeStringFormatter(hours, minutes)}
+    </h4>
+  );
 }
 
 export default appointmentTimeValidator;
