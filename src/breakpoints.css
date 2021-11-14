@@ -14,4 +14,8 @@
   #nav .hideMenu {
     display: flex;
   }
+
+  #nav .hideMenu {
+    color: #20335e;
+  }
 }

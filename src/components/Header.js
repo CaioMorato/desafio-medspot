@@ -16,7 +16,7 @@ function Header() {
         />
       </div>
       <div className="company-name">
-        <h1 className="text-2xl font-bold text-center">Medspot</h1>
+        <h1 className="text-2xl font-bold text-center text-color">Medspot</h1>
       </div>
       <div className="navigation-container">
         <nav id="nav">

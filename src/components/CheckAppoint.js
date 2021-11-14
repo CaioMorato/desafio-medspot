@@ -13,13 +13,16 @@ function CheckAppoint() {
   return (
     <section
       id="visualizar"
-      className="check-apt rounded-lg mx-4 min-h-1/4 bg-base-200 p-3 flex flex-col items-center md:w-1/2 md:m-auto"
+      className="check-apt rounded-lg mx-4 min-h-1/4 card-color p-3 flex flex-col items-center md:w-1/2 md:m-auto card-border"
     >
-      <div className="filter-buttons flex gap-x-7 p-4">
-        <button className="btn btn-info" onClick={() => setExhibitionFilter(false)}>
+      <div className="filter-buttons flex gap-x-7 p-4 ">
+        <button className="btn btn-info btn-blue-color" onClick={() => setExhibitionFilter(false)}>
           Todas
         </button>
-        <button className="btn btn-success " onClick={() => setExhibitionFilter(true)}>
+        <button
+          className="btn btn-success btn-blue-darker-color"
+          onClick={() => setExhibitionFilter(true)}
+        >
           Válidas
         </button>
       </div>
