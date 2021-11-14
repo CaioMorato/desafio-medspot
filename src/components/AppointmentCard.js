@@ -29,8 +29,8 @@ function AppointmentCard({ name, time, valid }) {
   return (
     <div
       className={`${
-        timeDifference < 120 ? 'appointment-card-color' : 'bg-primary-content'
-      } appointment-card text-neutral-contet m-3 p-3 w-10/12 shadow-provisory rounded-lg`}
+        timeDifference < 120 ? 'bg-orange-close-appointment' : 'bg-primary-content'
+      } appointment-card m-3 p-3 w-10/12 shadow-smooth rounded-lg`}
     >
       <div className="appointment-name-container my-3">
         <h3 className="text-center font-bold card-title">{name}</h3>
@@ -44,7 +44,7 @@ function AppointmentCard({ name, time, valid }) {
       </div>
       <div className="appointment-buttons-container flex justify-center my-3">
         <button
-          className="btn btn-sm btn-red-color"
+          className="btn btn-sm bg-red-tomato"
           onClick={() => removeScheduledTime({ name, time })}
         >
           <svg

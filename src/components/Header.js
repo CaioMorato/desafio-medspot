@@ -8,17 +8,18 @@ function Header() {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <header id="header" className="flex items-center justify-between mx-4 mb-5">
-      <div className="logo-container">
+      <div className="logo-container md:w-40">
         <img
           src={medspotLogo}
           width="64px"
           alt="Logo da minha futura empresa empresa do coração <3"
+          className=""
         />
       </div>
-      <div className="company-name">
-        <h1 className="text-2xl font-bold text-center text-color">Medspot</h1>
+      <div className="company-name md:w-40">
+        <h1 className="text-2xl font-bold text-center text-blue-dark">Medspot</h1>
       </div>
-      <div className="navigation-container">
+      <div className="navigation-container md:w-40">
         <nav id="nav">
           <button type="button" onClick={() => setShowMenu(!showMenu)}>
             <BsList size="2rem" />

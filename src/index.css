@@ -2,55 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
-
-.card-color {
-  background-color: #eee;
-}
-
-.text-color {
-  color: #20335e;
-}
-
-.btn-blue-color {
-  background-color: #0aace1;
-  outline: none;
-  border: none;
-}
-
-.btn-blue-darker-color {
-  background-color: #1e335e;
-  outline: none;
-  border: none;
-}
-
-.btn-blue-darker-color:hover {
-  background-color: #1e3c5e;
-}
-
-.btn-red-color {
-  background-color: #ff6161;
-}
-
-.appointment-card-color {
-  background-color: #ffdda9;
-}
-
-.card-border {
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.footer-color {
-  background-color: #1e335e;
-}
-
-.shadow-provisory {
-  box-shadow: 5px 4px 14px 2px rgba(0, 0, 0, 0.3);
-}
-
-.roboto-font {
-  font-family: 'Roboto Mono', monospace !important;
-}
-
 /* --------------------------
 General Config
 -------------------------- */
@@ -68,6 +19,42 @@ body {
 h1,
 h2 {
   font-family: 'Poppins', sans-serif;
+}
+
+/* --------------------------
+Custom Class Styles Config
+-------------------------- */
+
+.btn-blue-color {
+  background-color: #0aace1;
+  outline: none;
+  border: none;
+}
+
+.btn-blue-darker-color {
+  background-color: #1e335e;
+  outline: none;
+  border: none;
+}
+
+.btn-blue-darker-color:hover {
+  background-color: #1e3c5e;
+}
+
+.border-smooth-grey {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.footer-color {
+  background-color: #1e335e;
+}
+
+.shadow-smooth {
+  box-shadow: 5px 4px 14px 2px rgba(0, 0, 0, 0.3);
+}
+
+.roboto-font {
+  font-family: 'Roboto Mono', monospace !important;
 }
 
 /* --------------------------
