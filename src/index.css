@@ -13,10 +13,18 @@
 
 .btn-blue-color {
   background-color: #0aace1;
+  outline: none;
+  border: none;
 }
 
 .btn-blue-darker-color {
   background-color: #1e335e;
+  outline: none;
+  border: none;
+}
+
+.btn-blue-darker-color:hover {
+  background-color: #1e3c5e;
 }
 
 .btn-red-color {

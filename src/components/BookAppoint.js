@@ -64,7 +64,7 @@ function BookAppoint() {
             type="submit"
             className="btn btn-success my-3 mt-10 w-7/12"
             // the 'disabled' feature here is to prevent the User to click the button again right after the first time. If the User does that, the 'selectTime' won't change generating a bug :D
-            disabled={!selectTime}
+            disabled={!selectTime || selectTime.includes('Escolha')}
             onClick={() => {
               bookTime({ name: patientName, time: selectTime, valid: true });
               setSelectTime(false);
