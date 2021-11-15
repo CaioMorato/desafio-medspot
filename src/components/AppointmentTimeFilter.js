@@ -2,8 +2,8 @@ function appointmentTimeValidator(timeDifference, time) {
   let hours = parseInt(Math.floor(timeDifference / 60));
   let minutes = parseInt(Math.ceil(timeDifference % 60));
 
+  // just a "beautyfier" for the time string
   const timeStringFormatter = (hours, minutes) => {
-    // just a "beautyfier" for the time string
     if (minutes === 60) {
       hours += 1;
       minutes = 0;

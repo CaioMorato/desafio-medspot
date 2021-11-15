@@ -10,9 +10,10 @@ function AppointmentCard({ name, time, valid }) {
   const { scheduledTime, setScheduledTime, canceledSchedule, setCanceledSchedule } =
     useContext(MyContext);
 
-  // formats time into javascript 'new Date' constructor
+  // formats time into javascript Date format
   const formattedTime = timeFormatConverter(time);
-  // gets time difference from the current time and the appointment time
+
+  // gets time difference (in minutes) from the current time and the appointment time
   const timeDifference = timeDifferenceCalc(formattedTime);
 
   const removeScheduledTime = (appointmentObject) => {

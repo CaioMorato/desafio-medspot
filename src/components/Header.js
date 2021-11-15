@@ -9,8 +9,8 @@ import medspotLogo from '../images/medspot-no-bg.png';
 import { BsList, BsSunFill, BsFillMoonFill } from 'react-icons/bs';
 
 function Header() {
-  const [showMenu, setShowMenu] = useState(false);
   const { darkTheme, setDarkTheme } = useContext(MyContext);
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <header id="header" className="flex items-center justify-between mx-4 mb-5">
       <div className="logo-container md:w-52">

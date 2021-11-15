@@ -6,7 +6,7 @@
 
 ## Visão Geral
 
-##### Este projeto foi realizado utilizando HTML, CSS, React.js e o tailwind.
+##### Este projeto foi realizado utilizando HTML, CSS, React.js e o Tailwind.
 
 ---
 
@@ -15,14 +15,6 @@
 - [Pré Requisitos](#pré-requisitos)
 - [Instalação](#instalação)
 - [Utilização](#utilização)
-- [Rotas | Endpoints](#rotas)
-  - [POST](#método-post)
-  - [GET](#método-get)
-  - [PUT](#método-put)
-  - [DELETE](#método-delete)
-  - [Possíveis respostas/status](#possíveis-respostas-e-status)
-- [Tour pelos arquivos](#tour-pelos-arquivos)
-- [Uso de cada biblioteca](#uso-de-cada-biblioteca)
 - [Sobre o autor](#sobre-o-autor)
 
 ---
@@ -65,6 +57,8 @@ Após instalar as dependências, basta iniciar a aplicação em seu navegador, d
   No primeiro componente é possível simular a marcação de uma consulta. O sistema pede apenas 2 dados: o nome do paciente e um seletor de horários que vai de 30 em 30 minutos das 9:00 até 18:00. 
 
   Caso seja marcado um horário, esse horário ficará bloqueado para utilização, sendo necessário o cancelamento da consulta para que se libere o horário novamente.
+
+  
 
 - ### **Visualizar Consultas**
 

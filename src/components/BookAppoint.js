@@ -12,7 +12,7 @@ function BookAppoint() {
   const [patientName, setPatientName] = useState('');
   const [selectTime, setSelectTime] = useState(false);
 
-  // here's where the magic happens, this function generates an array with the time ranges that are different in those 2 arrays
+  // here's where the magic happens, this function generates an array with the time ranges that are different in the array that has all times and the scheduled times array
   const availableTimes = timeHandler(timeArray, scheduledTime);
 
   const handleChange = ({ target }) => {
