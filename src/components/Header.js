@@ -41,6 +41,7 @@ function Header() {
           <div className="toggle-container ml-6">
             <input
               type="checkbox"
+              checked={darkTheme}
               class="toggle-checkbox"
               id="chk"
               onClick={() => setDarkTheme(!darkTheme)}
