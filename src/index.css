@@ -122,3 +122,31 @@ Theme Toggle
 .toggle-checkbox:checked + .toggle-label .toggle-ball {
   transform: translateX(15px);
 }
+
+/* --------------------------
+Dark Theme
+-------------------------- */
+
+.bg-darkTheme-main {
+  background-color: #243047;
+}
+
+.bg-lightTheme-main {
+  background-color: #fff;
+}
+
+.bg-darkTheme-card {
+  background-color: #1e7aa1;
+}
+
+.bg-lightTheme-card {
+  background-color: #eee;
+}
+
+.text-darkTheme {
+  color: #57aace;
+}
+
+.text-lightTheme {
+  color: #20335e;
+}

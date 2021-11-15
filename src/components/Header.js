@@ -1,5 +1,7 @@
 // vitals
 import { useContext, useState } from 'react';
+// components
+import themeToggle from '../helpers/themeToggle';
 // context
 import MyContext from '../context/MyContext';
 // styles
@@ -16,11 +18,12 @@ function Header() {
           src={medspotLogo}
           width="64px"
           alt="Logo da minha futura empresa empresa do coração <3"
-          className=""
         />
       </div>
       <div className="company-name md:w-52">
-        <h1 className="text-2xl font-bold text-center text-blue-dark">Medspot</h1>
+        <h1 className={`${themeToggle('text', darkTheme)} text-2xl font-bold text-center`}>
+          Medspot
+        </h1>
       </div>
       <div className="navigation-container">
         <nav id="nav" className="flex flex-row items-center">
@@ -28,10 +31,10 @@ function Header() {
             <BsList size="2rem" />
           </button>
           <ul id="menu" className={`${showMenu ? 'showMenu' : 'hideMenu'}`}>
-            <li>
+            <li className={`${themeToggle('text', darkTheme)}`}>
               <a href="#marcar">Marcar</a>
             </li>
-            <li>
+            <li className={`${themeToggle('text', darkTheme)}`}>
               <a href="#visualizar">Visualizar</a>
             </li>
           </ul>
