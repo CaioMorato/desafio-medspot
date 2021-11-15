@@ -47,10 +47,6 @@ Custom Class Styles Config
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.footer-color {
-  background-color: #1e335e;
-}
-
 .shadow-smooth {
   box-shadow: 5px 4px 14px 2px rgba(0, 0, 0, 0.3);
 }
@@ -74,7 +70,7 @@ Header
   right: 0;
   text-align: center;
   top: 2.6rem;
-  background-color: #9ec8f1;
+  background-color: #1f4b5e;
 }
 
 #nav .hideMenu {
@@ -83,7 +79,7 @@ Header
 
 .showMenu li {
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid #95d1eb;
 }
 
 /* --------------------------
