@@ -1,11 +1,13 @@
 // vitals
 import { useContext, useState } from 'react';
+// components
+import themeToggle from '../helpers/themeToggle';
 // context
 import MyContext from '../context/MyContext';
 import AppointmentCard from './AppointmentCard';
 
 function CheckAppoint() {
-  const { scheduledTime, canceledSchedule } = useContext(MyContext);
+  const { scheduledTime, canceledSchedule, darkTheme } = useContext(MyContext);
   const [exhibitionFilter, setExhibitionFilter] = useState(true);
 
   const arrayMixUp = [...canceledSchedule, ...scheduledTime];
@@ -13,7 +15,10 @@ function CheckAppoint() {
   return (
     <section
       id="visualizar"
-      className="check-apt rounded-lg mx-4 min-h-1/4 card-color p-3 pb-7  flex flex-col items-center md:w-1/2 md:m-auto border-smooth-grey bg-white-gray-accent"
+      className={`${themeToggle(
+        'card',
+        darkTheme
+      )} check-apt rounded-lg mx-4 min-h-1/4 p-3 pb-7  flex flex-col items-center md:w-1/2 md:m-auto border-smooth-grey`}
     >
       <div className="filter-buttons flex gap-x-7 p-4 ">
         <button

@@ -1,6 +1,14 @@
+// vitals
+import { useContext } from 'react';
+// components
+import themeToggle from '../helpers/themeToggle';
+// context
+import MyContext from '../context/MyContext';
+
 function Footer() {
+  const { darkTheme } = useContext(MyContext);
   return (
-    <footer className="mt-10 p-4 px-6 bg-blue-dark">
+    <footer className={`${themeToggle('footer', darkTheme)} mt-10 p-4 px-6`}>
       <p className="text-center text-neutral-content">
         Feito por{' '}
         <a

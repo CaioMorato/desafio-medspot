@@ -17,6 +17,12 @@ const themeToggle = (component, darkTheme) => {
     }
     return 'text-lightTheme';
   }
+  if (component === 'footer') {
+    if (darkTheme) {
+      return 'bg-darkTheme-card';
+    }
+    return 'bg-darkTheme-card';
+  }
 };
 
 export default themeToggle;

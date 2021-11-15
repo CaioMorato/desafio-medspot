@@ -3,11 +3,12 @@ import { useContext, useState } from 'react';
 // components
 import timeArray from '../helpers/timeArray';
 import { timeHandler } from '../helpers/timeManipulation';
+import themeToggle from '../helpers/themeToggle';
 // context
 import MyContext from '../context/MyContext';
 
 function BookAppoint() {
-  const { scheduledTime, setScheduledTime } = useContext(MyContext);
+  const { scheduledTime, setScheduledTime, darkTheme } = useContext(MyContext);
   const [patientName, setPatientName] = useState('');
   const [selectTime, setSelectTime] = useState(false);
 
@@ -27,12 +28,15 @@ function BookAppoint() {
   return (
     <section
       id="marcar"
-      className="book-apt rounded-lg mx-4 p-4 bg-white-gray-accent flex flex-col items-center md:w-1/2 md:m-auto border-smooth-grey"
+      className={`${themeToggle(
+        'card',
+        darkTheme
+      )} book-apt rounded-lg mx-4 p-4 flex flex-col items-center md:w-1/2 md:m-auto border-smooth-grey`}
     >
       <form onSubmit={(e) => e.preventDefault()}>
         <div className="form-control">
           <label className="label">
-            <span className="label-text text-xl mb-3 text-blue-dark">Marcar consulta para:</span>
+            <span className="label-text text-xl mb-3">Marcar consulta para:</span>
           </label>
           <input
             type="text"
@@ -43,7 +47,7 @@ function BookAppoint() {
         </div>
         <div className="form-control flex flex-col">
           <label className="label">
-            <span className="label-text text-xl mb-3 text-blue-dark">Horários disponíveis:</span>
+            <span className="label-text text-xl mb-3">Horários disponíveis:</span>
           </label>
           <select
             name="time-select"
