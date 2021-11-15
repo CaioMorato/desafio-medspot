@@ -23,6 +23,11 @@ h2 {
   font-family: 'Poppins', sans-serif;
 }
 
+select {
+  background-color: #eee;
+  color: #1e335e;
+}
+
 /* --------------------------
 Custom Class Styles Config
 -------------------------- */
@@ -31,10 +36,12 @@ Custom Class Styles Config
   background-color: #0aace1;
   outline: none;
   border: none;
+  color: #eee;
 }
 
 .btn-blue-darker-color {
   background-color: #1e335e;
+  color: #eee;
   outline: none;
   border: none;
 }
@@ -53,6 +60,15 @@ Custom Class Styles Config
 
 .roboto-font {
   font-family: 'Roboto Mono', monospace !important;
+}
+
+.input {
+  background-color: #fff;
+  color: #1e335e;
+}
+
+.input::placeholder {
+  color: #1e3c5e;
 }
 
 /* --------------------------
@@ -83,7 +99,7 @@ Header
 }
 
 /* --------------------------
-Theme Toggle
+Theme Toggler
 -------------------------- */
 
 .toggle-checkbox {
@@ -120,7 +136,7 @@ Theme Toggle
 }
 
 /* --------------------------
-Dark Theme
+Dark Theme Config Classes
 -------------------------- */
 
 .bg-darkTheme-main {

@@ -41,11 +41,11 @@ function Header() {
           <div className="toggle-container ml-6">
             <input
               type="checkbox"
-              class="toggle-checkbox"
+              className="toggle-checkbox"
               id="chk"
               onClick={() => setDarkTheme(!darkTheme)}
             />
-            <label className="toggle-label" for="chk">
+            <label className="toggle-label" htmlFor="chk">
               <BsSunFill fill="#f39c12" size="10px" />
               <BsFillMoonFill fill="#f1c40f" size="10px" />
               <div className="toggle-ball"></div>

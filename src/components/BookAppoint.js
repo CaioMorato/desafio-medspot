@@ -36,7 +36,9 @@ function BookAppoint() {
       <form onSubmit={(e) => e.preventDefault()}>
         <div className="form-control">
           <label className="label">
-            <span className="label-text text-xl mb-3">Marcar consulta para:</span>
+            <span className={`${themeToggle('text', darkTheme)} label-text text-xl mb-3`}>
+              Marcar consulta para:
+            </span>
           </label>
           <input
             type="text"
@@ -47,12 +49,14 @@ function BookAppoint() {
         </div>
         <div className="form-control flex flex-col">
           <label className="label">
-            <span className="label-text text-xl mb-3">Horários disponíveis:</span>
+            <span className={`${themeToggle('text', darkTheme)} label-text text-xl mb-3`}>
+              Horários disponíveis:
+            </span>
           </label>
           <select
             name="time-select"
             id="time-select"
-            className="select select-bordered select-md text-blue-dark"
+            className="select input select-bordered select-md text-blue-dark"
             value={selectTime}
             onChange={(evt) => handleChange(evt)}
           >

@@ -8,7 +8,7 @@ import MyContext from '../context/MyContext';
 function Footer() {
   const { darkTheme } = useContext(MyContext);
   return (
-    <footer className={`${themeToggle('footer', darkTheme)} mt-10 p-4 px-6`}>
+    <footer id="footer" className={`${themeToggle('footer', darkTheme)} mt-10 p-4 px-6`}>
       <p className="text-center text-neutral-content">
         Feito por{' '}
         <a

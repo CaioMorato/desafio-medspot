@@ -26,6 +26,6 @@ export const timeFormatConverter = (time) => {
 export const timeDifferenceCalc = (appointmentTime) => {
   const currentTime = new Date();
   const milisecondsDiff = appointmentTime - currentTime;
-
+  
   return milisecondsDiff / 1000 / 60;
 };

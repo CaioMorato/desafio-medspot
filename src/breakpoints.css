@@ -19,3 +19,11 @@
     color: #20335e;
   }
 }
+
+@media (min-width: 1600px) {
+  #footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+}

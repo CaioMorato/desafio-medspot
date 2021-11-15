@@ -30,19 +30,19 @@ function AppointmentCard({ name, time, valid }) {
     <div
       className={`${
         timeDifference <= 120 ? 'bg-orange-close-appointment' : 'bg-primary-content'
-      } appointment-card m-3 p-3 w-10/12 shadow-smooth rounded-lg`}
+      } m-3 p-3 w-10/12 shadow-smooth rounded-lg`}
     >
-      <div className="appointment-name-container my-3">
-        <h3 className="text-center font-bold card-title">{name}</h3>
+      <div className="my-3">
+        <h3 className="text-center font-bold card-title text-neutral-focus">{name}</h3>
       </div>
-      <div className="appointment-time-container my-3">
-        <h4 className="text-center roboto-font">{time}</h4>
+      <div className="my-3">
+        <h4 className="text-center roboto-font text-neutral-focus">{time}</h4>
       </div>
-      <div className="appointment-timediff-container my-3 flex flex-col items-center">
+      <div className="my-3 flex flex-col items-center">
         {/* generates different card messages depending on the time difference */}
         {appointmentTimeValidator(timeDifference, time)}
       </div>
-      <div className="appointment-buttons-container flex justify-center my-3">
+      <div className="flex justify-center my-3">
         <button
           className="btn btn-sm bg-red-tomato"
           onClick={() => removeScheduledTime({ name, time })}
